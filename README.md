@@ -1,4 +1,4 @@
-#BmapLite 
+# BmapLite
 
 基于百度地图SDK、高德地图SDK开发的可换源的地图app，Bmap的简版，不含导航组件
 

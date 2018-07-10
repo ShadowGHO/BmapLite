@@ -1,6 +1,7 @@
 package me.gfuil.bmap.lite.activity;
 
 import android.content.DialogInterface;
+import android.os.Build;
 import android.os.Bundle;
 import android.support.annotation.IdRes;
 import android.support.annotation.Nullable;
@@ -66,19 +67,19 @@ public class SettingActivity extends BaseActivity implements View.OnClickListene
 //        mSpinnerZoom.setSelection(configInteracter.getZoomControlsPosition() ? 0 : 1);
 //        mSpinnerLocation.setSelection(configInteracter.getLocationPosition() ? 0 : 1);
 
-        
-		if (configInteracter.getZoomControlsPosition()) {
-			mGroupZoom.check(R.id.radio_zoom_right);
-		} else {
-			mGroupZoom.check(R.id.radio_zoom_left);
-		}
+
+        if (configInteracter.getZoomControlsPosition()) {
+            mGroupZoom.check(R.id.radio_zoom_right);
+        } else {
+            mGroupZoom.check(R.id.radio_zoom_left);
+        }
         if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.LOLLIPOP) {
-			if (configInteracter.getNightMode() == 2) {
-				mGroupMode.check(R.id.radio_black);
-			}else {
-				mGroupMode.check(R.id.radio_white);
-			}
-		}
+            if (configInteracter.getNightMode() == 2) {
+                mGroupMode.check(R.id.radio_black);
+            } else {
+                mGroupMode.check(R.id.radio_white);
+            }
+        }
     }
 
     @Override
@@ -128,10 +129,10 @@ public class SettingActivity extends BaseActivity implements View.OnClickListene
         getView(R.id.lay_about).setOnClickListener(this);
         getView(R.id.lay_setting_dir).setOnClickListener(this);
         getView(R.id.lay_setting_default_route).setOnClickListener(this);
-		
-		if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.LOLLIPOP) {
+
+        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.LOLLIPOP) {
             getView(R.id.lay_mode).setVisibility(View.VISIBLE);
-        }else {
+        } else {
             getView(R.id.lay_mode).setVisibility(View.GONE);
         }
 //        mSpinnerZoom.setOnItemSelectedListener(this);

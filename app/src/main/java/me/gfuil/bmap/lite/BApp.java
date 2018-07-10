@@ -3,6 +3,7 @@ package me.gfuil.bmap.lite;
 import android.app.Activity;
 import android.app.Application;
 import android.content.Context;
+import android.os.Build;
 import android.os.RemoteException;
 import android.support.multidex.MultiDex;
 import android.support.v7.app.AppCompatDelegate;

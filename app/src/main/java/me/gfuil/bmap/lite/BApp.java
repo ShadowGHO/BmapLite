@@ -44,11 +44,13 @@ public class BApp extends Application {
     }
 
     public void setNightMode() {
-        ConfigInteracter configInteracter = new ConfigInteracter(this);
-        if (configInteracter.getNightMode() == 2) {
-            AppCompatDelegate.setDefaultNightMode(AppCompatDelegate.MODE_NIGHT_YES);
-        } else {
-            AppCompatDelegate.setDefaultNightMode(AppCompatDelegate.MODE_NIGHT_NO);
+		if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.LOLLIPOP) {
+            ConfigInteracter configInteracter = new ConfigInteracter(this);
+			if (configInteracter.getNightMode() == 2) {
+				AppCompatDelegate.setDefaultNightMode(AppCompatDelegate.MODE_NIGHT_YES);
+			} else {
+				AppCompatDelegate.setDefaultNightMode(AppCompatDelegate.MODE_NIGHT_NO);
+			}
         }
 
     }

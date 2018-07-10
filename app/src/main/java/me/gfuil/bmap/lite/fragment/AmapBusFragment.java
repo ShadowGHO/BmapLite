@@ -147,7 +147,6 @@ public class AmapBusFragment extends BaseFragment implements AdapterView.OnItemC
                     bus.setSteps(null);
                     List<BusPath> list = new ArrayList<>();
                     list.addAll(result.getPaths());
-                    list.add(bus);
 
                     setBusRouteAdapter(list, result);
                 } else {

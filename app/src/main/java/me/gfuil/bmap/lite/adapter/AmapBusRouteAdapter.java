@@ -33,9 +33,6 @@ public class AmapBusRouteAdapter extends BaseListAdapter<BusPath> {
         if (getList().get(position).getSteps() != null ) {
             textInfo.setText(AMapUtil.getBusPathTitle(getList().get(position)));
             textRoute.setText(AMapUtil.getBusPathDes(getList().get(position)));
-        }else {
-            textInfo.setText("实时公交");
-            textRoute.setVisibility(View.GONE);
         }
 
         return convertView;
